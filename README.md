@@ -4,11 +4,11 @@ A pixel-perfect React JS implementation of the **PopX** mobile app interface, ce
 
 ##  Live Demo
 
-> _Deploy to Vercel/Netlify and paste your hosted link here_
+https://popx-app-ebon-ten.vercel.app/
 
 ##  Repository
 
----
+https://github.com/piyushFunde/popx-app/
 
 ## Pages
 
