@@ -2,17 +2,15 @@
 
 A pixel-perfect React JS implementation of the **PopX** mobile app interface, centered on the webpage with seamless page navigation.
 
-## 🚀 Live Demo
+##  Live Demo
 
 > _Deploy to Vercel/Netlify and paste your hosted link here_
 
-## 📂 Repository
-
-> _Paste your public GitHub repository link here_
+##  Repository
 
 ---
 
-## 📱 Pages
+## Pages
 
 | Page | Route | Description |
 |---|---|---|
@@ -21,14 +19,14 @@ A pixel-perfect React JS implementation of the **PopX** mobile app interface, ce
 | Create Account | `/create-account` | Registration form with all required fields |
 | Account Settings | `/account-settings` | Profile view with avatar & user info |
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **React 19** (with Hooks)
 - **React Router v7** — client-side routing
 - **Vite** — blazing fast build tool
 - **Vanilla CSS** — no frameworks, clean custom styles
 
-## 📐 Design Highlights
+##  Design Highlights
 
 - **Mobile-first** — 390px phone wrapper centered on desktop
 - **Purple primary** (`#6c3ce1`) matching the design exactly
@@ -51,7 +49,7 @@ npm run dev
 npm run build
 ```
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 src/
@@ -71,7 +69,7 @@ public/
 └── avatar.png              # Default profile photo
 ```
 
-## 🚢 Deployment
+##  Deployment
 
 Deploy to Vercel in one click:
 
