@@ -78,8 +78,4 @@ npm install -g vercel
 vercel --prod
 ```
 
-Or connect your GitHub repo to [Vercel](https://vercel.com) / [Netlify](https://netlify.com) for automatic deployments.
-
----
-
 Built for **PopX Intern/Fresher Qualifier Task** — React JS
