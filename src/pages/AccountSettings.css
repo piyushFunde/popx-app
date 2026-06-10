@@ -1,0 +1,122 @@
+.account-settings-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 844px;
+  background-color: var(--color-bg);
+}
+
+/* ---- Header ---- */
+.settings-header {
+  background-color: var(--color-white);
+  padding: 20px 24px 18px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.settings-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text-dark);
+  letter-spacing: -0.1px;
+}
+
+/* ---- Body ---- */
+.settings-body {
+  padding: 24px;
+  background-color: var(--color-white);
+  flex: 1;
+}
+
+/* ---- Profile row ---- */
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+/* Avatar */
+.avatar-wrapper {
+  position: relative;
+  flex-shrink: 0;
+  cursor: pointer;
+  width: 72px;
+  height: 72px;
+}
+
+.avatar-img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  border: 2px solid var(--color-border);
+  transition: var(--transition);
+}
+
+.avatar-wrapper:hover .avatar-img {
+  opacity: 0.85;
+}
+
+.camera-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  transition: var(--transition);
+}
+
+.camera-btn:hover {
+  background-color: var(--color-primary-hover);
+  transform: scale(1.1);
+}
+
+.camera-btn svg {
+  width: 11px;
+  height: 11px;
+}
+
+/* Profile info */
+.profile-info {
+  flex: 1;
+}
+
+.profile-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  margin-bottom: 4px;
+}
+
+.profile-email {
+  font-size: 13px;
+  color: var(--color-text-light);
+}
+
+/* Dividers */
+.settings-divider {
+  height: 1px;
+  background-color: var(--color-border);
+  margin: 4px 0 20px;
+}
+
+.settings-divider-dashed {
+  border: none;
+  border-top: 1.5px dashed var(--color-border);
+  margin-top: 24px;
+}
+
+/* Bio */
+.profile-bio {
+  font-size: 13.5px;
+  color: var(--color-text-medium);
+  line-height: 1.7;
+}

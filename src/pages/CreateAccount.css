@@ -1,0 +1,54 @@
+.create-account-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 844px;
+  background-color: var(--color-bg);
+}
+
+.create-account-content {
+  padding: 40px 24px 32px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.create-account-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  line-height: 1.3;
+  letter-spacing: -0.3px;
+  margin-bottom: 28px;
+}
+
+.create-account-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Required asterisk */
+.required-star {
+  color: var(--color-primary);
+  margin-left: 1px;
+}
+
+/* Agency section */
+.agency-section {
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+.agency-question {
+  font-size: 14px;
+  color: var(--color-text-medium);
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+/* Push button to bottom */
+.create-account-footer {
+  margin-top: auto;
+  padding-top: 32px;
+  padding-bottom: 8px;
+}
