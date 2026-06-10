@@ -5,6 +5,21 @@
   background-color: var(--color-bg);
 }
 
+.back-btn {
+  background: none;
+  border: none;
+  padding: 16px 24px 0;
+  cursor: pointer;
+  color: var(--color-text-dark);
+  display: inline-flex;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.back-btn:hover {
+  color: var(--color-primary);
+}
+
 .login-content {
   padding: 48px 24px 40px;
 }

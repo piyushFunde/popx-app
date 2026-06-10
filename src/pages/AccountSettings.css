@@ -120,3 +120,28 @@
   color: var(--color-text-medium);
   line-height: 1.7;
 }
+
+/* Logout */
+.logout-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  margin-top: 28px;
+  padding: 14px;
+  background-color: #fff7ed;
+  border: 1.5px solid #ffd3bb;
+  border-radius: var(--border-radius);
+  color: #f97316;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-family);
+  transition: var(--transition);
+}
+
+.logout-btn:hover {
+  background-color: #ffedd5;
+  border-color: #fdba74;
+}

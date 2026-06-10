@@ -1,8 +1,7 @@
 import { useRef } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import './AccountSettings.css';
 
-// Camera SVG icon
 function CameraIcon() {
   return (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -24,33 +23,59 @@ function CameraIcon() {
   );
 }
 
+function LogoutIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+      <polyline points="16 17 21 12 16 7" />
+      <line x1="21" y1="12" x2="9" y2="12" />
+    </svg>
+  );
+}
+
 function AccountSettings() {
   const location = useLocation();
   const fileInputRef = useRef(null);
+  const navigate = useNavigate();
 
-  // Use data passed from CreateAccount / Login, or fall back to defaults
-  const userName = location.state?.name || 'Marry Doe';
-  const userEmail = location.state?.email || 'Marry@Gmail.Com';
+  // Load from localStorage or state or fallback to default Marry Doe
+  const getLoggedInUser = () => {
+    const stored = localStorage.getItem('popx_current_user');
+    if (stored) {
+      try {
+        return JSON.parse(stored);
+      } catch {
+        return null;
+      }
+    }
+    return null;
+  };
+
+  const currentUser = getLoggedInUser();
+  const userName = currentUser?.fullName || location.state?.name || 'Marry Doe';
+  const userEmail = currentUser?.emailAddress || location.state?.email || 'Marry@Gmail.Com';
 
   const handleAvatarClick = () => {
     fileInputRef.current?.click();
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem('popx_current_user');
+    navigate('/');
+  };
+
   return (
     <div className="account-settings-page page-enter">
-      {/* Header */}
       <div className="settings-header">
         <h1 className="settings-title">Account Settings</h1>
       </div>
 
-      {/* Profile Section */}
       <div className="settings-body">
         <div className="profile-section">
-          {/* Avatar with camera overlay */}
           <div className="avatar-wrapper" role="button" tabIndex={0} onClick={handleAvatarClick} aria-label="Change profile photo">
             <img
               src="/avatar.png"
-              alt="Profile photo of Marry Doe"
+              alt={`Profile photo of ${userName}`}
               className="avatar-img"
             />
             <button
@@ -61,7 +86,6 @@ function AccountSettings() {
             >
               <CameraIcon />
             </button>
-            {/* Hidden file input */}
             <input
               ref={fileInputRef}
               type="file"
@@ -71,25 +95,28 @@ function AccountSettings() {
             />
           </div>
 
-          {/* User info */}
           <div className="profile-info">
             <p className="profile-name">{userName}</p>
             <p className="profile-email">{userEmail}</p>
           </div>
         </div>
 
-        {/* Divider */}
         <div className="settings-divider" />
 
-        {/* Bio text */}
         <p className="profile-bio">
           Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing
           Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut
           Labore Et Dolore Magna Aliquyam Erat, Sed Diam
         </p>
 
-        {/* Dashed divider */}
         <div className="settings-divider-dashed" />
+
+        <button
+          className="logout-btn"
+          onClick={handleLogout}
+        >
+          <LogoutIcon /> Log out
+        </button>
       </div>
     </div>
   );
