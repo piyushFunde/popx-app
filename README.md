@@ -36,7 +36,7 @@ https://github.com/piyushFunde/popx-app/
 - **Responsive** — full-screen on mobile viewports
 - **Pixel-perfect** spacing, typography (Inter font), colors
 
-## 🔧 Getting Started
+## Getting Started
 
 ```bash
 # Install dependencies
